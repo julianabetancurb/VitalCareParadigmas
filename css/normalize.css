@@ -1,0 +1,108 @@
+/* Barra de arriba */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Establece el fondo blanco */
+}
+
+.navbar {
+    background-color: #0599ef;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul .group {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar nav ul .group button {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar nav ul .group button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Imagen */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Restar el tamaño de la barra de navegación */
+    padding: 20px;
+}
+
+.container .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.container .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.container .form-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0599ef;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #007bbf;
+}

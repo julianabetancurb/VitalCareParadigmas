@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalCare - Ver Citas</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        background-color: #0599ef;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar .logo img {
+        height: 50px;
+    }
+    .navbar nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .navbar nav ul .group {
+        display: flex;
+        gap: 10px;
+    }
+    .navbar nav ul .group button {
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+    }
+    .navbar nav ul .group button:hover {
+        background-color: #f0f0f0;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 47.5vh;
+        width: 210vh;
+        position: relative;
+    }
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 0;
+        opacity: 0.7;
+    }
+    .no-appointments {
+        background-color: #f8f8f8;
+        border: 1px solid #dcdcdc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+        color: #333;
+    }
+    .appointment {
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/vital.png" alt="Logotipo" class="img">
+      </div>
+      <nav>
+        <ul>
+          <div class="group">
+            <button id="appointments-btn">Agendar cita</button>
+            <button id="profile-btn">Perfil</button>
+            <button id="mapa-btn">EPS cercana</button>
+            <button id="back-btn">Volver</button>
+            <button id="logout-btn">Cerrar sesión</button>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <img src="images/marco4.png" alt="Marco">
+    </div>
+    <div id="appointments-list" class="no-appointments">
+    </div>
+  </header>
+  <script type="module" src="view.js"></script>
+</body>
+</html>

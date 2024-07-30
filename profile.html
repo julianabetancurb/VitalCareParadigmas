@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalCare - Perfil de Usuario</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('images/fondo2.png'); /* Imagen de fondo para toda la pantalla */
+      background-size: cover;
+      background-position: center;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0599ef;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+    }
+    .logo img {
+      height: 50px;
+    }
+    .navbar nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar nav ul .group {
+      display: flex;
+      gap: 10px;
+    }
+    .navbar nav ul .group button {
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+    .navbar nav ul .group button:hover {
+      background-color: #f0f0f0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Centrar verticalmente */
+      height: 100vh; /* Ajustar el contenedor a la altura de la pantalla */
+      padding: 20px;
+      margin-top: 80px; /* Para dejar espacio para la barra fija */
+    }
+    .form-container {
+      width: 100%;
+      max-width: 400px; /* Limitar ancho máximo */
+      margin: 10px;
+      border-radius: 10px;
+      background-color: #fff; /* Fondo blanco para el formulario */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    .form-container h1 {
+      margin-bottom: 20px;
+    }
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .form-container label {
+      margin-bottom: 5px;
+    }
+    .form-container input, .form-container select, .form-container button {
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .form-container button {
+      background-color: #0599ef;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background-color: #007bbf;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/vital.png" alt="Logotipo" class="img">
+      </div>
+      <nav>
+        <ul>
+          <div class="group">
+            <button id="mapa-btn">EPS cercana</button>
+            <button id="appointments-btn">Agendar cita</button>
+            <button id="view-appointments-btn">Ver citas</button>
+            <button id="logout-btn">Cerrar sesión</button>
+
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <div class="form-container">
+      <h1>Editar Perfil</h1>
+      <form id="profile-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="celular" required>
+        
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" required>
+        
+        <label for="eps">EPS Afiliado:</label>
+        <select id="eps" name="eps" required>
+          <option value="sanitas">Sanitas</option>
+          <option value="nueva_eps">Nueva EPS</option>
+          <option value="sura">Sura</option>
+        </select> 
+        
+        <button type="submit" id="save-btn">Guardar Cambios</button>
+      </form>
+    </div>
+  </div>
+  <script src="profile.js"></script>
+</body>
+</html>

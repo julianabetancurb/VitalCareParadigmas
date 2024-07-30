@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        background-color: #0599ef;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar .logo img {
+        height: 50px;
+    }
+    .navbar nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .navbar nav ul .group {
+        display: flex;
+        gap: 10px;
+    }
+    .navbar nav ul .group button {
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+    }
+    .navbar nav ul .group button:hover {
+        background-color: #f0f0f0;
+    }
+    #controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        gap: 10px;
+    }
+    #controls button {
+        background-color: #0599ef;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+        color: white;
+    }
+    #controls button:hover {
+        background-color: #047bb1;
+    }
+    #map {
+        width: 100%;
+        height: calc(100vh - 120px); /* Ajusta la altura del mapa */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/vital.png" alt="Logotipo" class="img">
+      </div>
+      <nav>
+        <ul>
+          <div class="group">
+            <button id="index-button">
+              <span>Acerca de</span>
+            </button>
+            <button>
+              <span>EPS cercana</span>
+            </button>
+            <button id="profile-btn">Perfil</button>
+            <button id="logout-btn">Cerrar sesión</button>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="controls">
+    <button onclick="showMarkers('sura')">Sura</button>
+    <button onclick="showMarkers('nueva_eps')">Nueva EPS</button>
+    <button onclick="showMarkers('sanitas')">Sanitas</button>
+  </div>
+  <div id="map"></div>
+  <script src="./mapa.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlOPafUjI4yEINyfpTYoIM8qADnUfQ39A&libraries=places&callback=initMap" defer></script>
+</body>
+</html>
