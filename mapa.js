@@ -50,3 +50,17 @@ window.showMarkers = function(type) {
     }
     markers[type].forEach(marker => marker.setVisible(true));
 };
+
+  document.getElementById('appointments-btn').addEventListener('click', () => {
+    window.location.href = 'appointment.html';
+  });
+  document.getElementById('profile-btn').addEventListener('click', () => {
+    window.location.href = 'profile.html';
+  });
+  document.getElementById('back-btn').addEventListener('click', () => {
+    window.location.href = 'index.html';
+  });
+  document.getElementById('logout-btn').addEventListener('click', () => {
+    localStorage.removeItem('userEmail');
+    window.location.href = 'login.html';
+  });

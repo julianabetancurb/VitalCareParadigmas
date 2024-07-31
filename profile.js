@@ -21,23 +21,23 @@
     if (!userEmail) {
       window.location.href = 'login.html'; 
     }
+    
 
     document.getElementById('logout-btn').addEventListener('click', () => {
       localStorage.removeItem('userEmail');
       window.location.href = 'login.html';
     });
-    
+  
     document.getElementById('appointments-btn').addEventListener('click', () => {
       window.location.href = 'appointment.html';
     });
-    
     document.getElementById('view-appointments-btn').addEventListener('click', () => {
       window.location.href = 'view.html';
     });
-    
     document.getElementById('mapa-btn').addEventListener('click', () => {
       window.location.href = 'mapa.html';
     });
+
     
 
     document.getElementById('profile-form').addEventListener('submit', (e) => {
